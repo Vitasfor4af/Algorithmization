@@ -18,9 +18,26 @@ public class Task {
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + "\t");
         }
+
         for (int i = 0; i < array.length; i++) {
             if ((i + 1) % 2 == 0) array[i] = 0;
         }
+
+        for (int i = 0; i < array.length; i++) {
+            if ((i + 1) % 2 == 0) {
+                int iKeeper = i;
+                for (int j = i; j < array.length; j++) {
+                    if ((j + 1) % 2 != 0) {
+                        int tmp = array[i];
+                        array[i] = array[j];
+                        array[j] = tmp;
+                        i = j;
+                    }
+                }
+                i = iKeeper;
+            }
+        }
+
         System.out.println();
         System.out.println("Result: ");
         for (int i = 0; i < array.length; i++) {
