@@ -1,4 +1,4 @@
-package by.epam.arrays;
+package by.epam.arrays.Task1;
 
 import java.util.Scanner;
 

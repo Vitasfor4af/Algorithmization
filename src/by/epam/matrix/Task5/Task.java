@@ -1,3 +1,5 @@
+package by.epam.matrix.Task5;
+
 import java.util.Scanner;
 
 /* Сформировать квадратную матрицу порядка n по заданному образцу(n - четное) */

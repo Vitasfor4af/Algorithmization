@@ -1,3 +1,5 @@
+package by.epam.matrix.Task1;
+
 import java.util.Scanner;
 
 /* Дана матрица.

@@ -1,8 +1,9 @@
+package by.epam.matrix.Task2;
+
 import java.util.Scanner;
 
 /* Дана квадратная матрица. Вывести на экран элементы,
  стоящие на диагонали */
-
 
 public class Task {
     public static void main(String[] args) {

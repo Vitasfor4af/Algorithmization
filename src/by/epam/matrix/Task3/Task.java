@@ -1,3 +1,5 @@
+package by.epam.matrix.Task3;
+
 import java.util.Scanner;
 
 /* Дата матрица. Вывести k-ю строку и p-й столбец матрицы */

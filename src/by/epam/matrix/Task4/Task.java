@@ -1,3 +1,5 @@
+package by.epam.matrix.Task4;
+
 import java.util.Scanner;
 
 /* Сформировать квадратную матрицу порядка n

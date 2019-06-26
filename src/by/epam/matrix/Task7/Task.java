@@ -1,3 +1,5 @@
+package by.epam.matrix.Task7;
+
 import java.util.Scanner;
 import static java.lang.Math.*;
 

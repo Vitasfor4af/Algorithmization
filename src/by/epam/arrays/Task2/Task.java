@@ -1,3 +1,5 @@
+package by.epam.arrays.Task2;
+
 import java.util.Scanner;
 
 /* Дана последовательность действительных чисел

@@ -1,3 +1,5 @@
+package by.epam.matrix.Task8;
+
 import java.util.Scanner;
 
 /* В числовой матрице поменять местами два столбца любых столбца,

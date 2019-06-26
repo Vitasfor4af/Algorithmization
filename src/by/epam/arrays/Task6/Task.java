@@ -1,3 +1,5 @@
+package by.epam.arrays.Task6;
+
 import java.util.Scanner;
 
 /* Задана последовательность N вещественных чисел.

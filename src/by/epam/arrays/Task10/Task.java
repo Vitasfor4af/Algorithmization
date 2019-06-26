@@ -1,3 +1,5 @@
+package by.epam.arrays.Task10;
+
 import java.util.Scanner;
 
 /* Дан целочисленный массив с количеством элементов п.

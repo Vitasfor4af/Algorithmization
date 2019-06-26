@@ -1,3 +1,5 @@
+package by.epam.matrix.Task9;
+
 import java.util.Scanner;
 
 /* Задана матрица неотрицательных чисел.

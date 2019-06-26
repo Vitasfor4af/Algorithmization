@@ -1,3 +1,5 @@
+package by.epam.arrays.Task7;
+
 import java.util.Random;
 import java.util.Scanner;
 
