@@ -8,28 +8,25 @@ import java.util.Scanner;
 
 public class Task {
 
-    public static int count = 0;
 
     public static void main(String[] args) {
-        Scanner scn = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.print("Input the size of array = ");
-        int size = scn.nextInt();
+        int size = scanner.nextInt();
         System.out.print("Input the value of Z = ");
-        int Z = scn.nextInt();
+        int Z = scanner.nextInt();
+        scanner.close();
+        int count = 0;
         int[] array = new int[size];
         for (int i = 0; i < array.length; i++) {
             array[i] = i;
-            System.out.print(compute(array[i], Z) + "\t");
+            if (array[i] > Z) {
+                array[i] = Z;
+                count++;
+            }
+            System.out.print(array[i] + "\t");
         }
         System.out.println("\n Number of replacements = " + count);
 
-    }
-
-    public static int compute(int i, int Z) {
-        if (i > Z) {
-            i = Z;
-            count++;
-        }
-        return i;
     }
 }

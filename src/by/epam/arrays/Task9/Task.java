@@ -9,15 +9,15 @@ import static java.lang.Math.*;
 
 public class Task {
     public static void main(String[] args) {
-        Scanner scn = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.print("Input the size of array = ");
-        int size = scn.nextInt();
+        int size = scanner.nextInt();
         int[] array = new int[size];
         System.out.println("Input the elements of array: ");
         for (int i = 0; i < array.length; i++) {
-            array[i] = scn.nextInt();
+            array[i] = scanner.nextInt();
         }
-
+        scanner.close();
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + "\t");
         }

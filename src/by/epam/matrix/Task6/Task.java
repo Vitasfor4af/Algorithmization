@@ -7,9 +7,10 @@ import java.util.Scanner;
 public class Task {
     public static void main(String[] args) {
 
-        Scanner scn = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.print("Input the size of array = ");
-        int n = scn.nextInt();
+        int n = scanner.nextInt();
+        scanner.close();
         if (n % 2 != 0) {
             System.out.println("Invalid value of n");
         } else {
@@ -34,8 +35,6 @@ public class Task {
                 }
                 System.out.println();
             }
-
-
         }
     }
 }

@@ -8,9 +8,9 @@ import java.util.Scanner;
 public class Task {
     public static void main(String[] args) {
 
-        Scanner scn = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.print("Input the size of array = ");
-        int n = scn.nextInt();
+        int n = scanner.nextInt();
         if (n % 2 != 0) {
             System.out.println("Invalid value of n");
         } else {
@@ -20,16 +20,16 @@ public class Task {
             for (int i = 0; i < array.length; i++) {
                 if ((i + 1) % 2 != 0) {
                     for (int j = 0; j < array.length; j++) {
-                        array[i][j] = scn.nextInt();
+                        array[i][j] = scanner.nextInt();
                     }
                 } else {
                     for (int k = array.length - 1; k >= 0; k--) {
-                        array[i][k] = scn.nextInt();
+                        array[i][k] = scanner.nextInt();
                     }
                 }
                 System.out.println();
             }
-
+            scanner.close();
             System.out.println("------------------------");
 
             for (int i = 0; i < array.length; i++) {

@@ -7,50 +7,41 @@ import java.util.Scanner;
  Поменять местами наибольший и наименьший элементы. */
 
 public class Task {
-    public static void main(String[] args) {
-        Scanner scn = new Scanner(System.in);
-        System.out.print("Input the size of array = ");
-        int size = scn.nextInt();
-        int[] array = new int[size];
-        for (int i = 0; i < array.length; i++)
-            array[i] = scn.nextInt();
-        int min = searchMin(array);
-        int max = searchMax(array);
-        System.out.print("MAX = " + searchMax(array) + " ");
-        System.out.println("MIN = " + searchMin(array));
-        for (int i = 0; i < array.length; i++)
-            System.out.print(array[i] + "\t");
-        System.out.println();
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] == max) {
-                array[i] = min;
-            } else if (array[i] == min) {
-                array[i] = max;
-            }
-        }
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + "\t");
-        }
-    }
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Input the size of array = ");
+		int size = scanner.nextInt();
+		int[] array = new int[size];
+		System.out.println("Input the elements of array: ");
+		for (int i = 0; i < array.length; i++) {
+			array[i] = scanner.nextInt();
+		}
+		scanner.close();
+		int min = array[0];
+		for (int i = 0; i < array.length; i++) {
+			if (array[i] < min)
+				min = array[i];
+		}
 
-    public static int randInt(int min, int max) {
-        Random ram = new Random();
-        return ram.nextInt((max - min) + 1) + min;
-    }
-
-    public static int searchMax(int[] array) {
-        int max = array[0];
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] > max) max = array[i];
-        }
-        return max;
-    }
-
-    public static int searchMin(int[] array) {
-        int min = array[0];
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] < min) min = array[i];
-        }
-        return min;
-    }
+		int max = array[0];
+		for (int i = 0; i < array.length; i++) {
+			if (array[i] > max)
+				max = array[i];
+		}
+		System.out.print("MAX = " + max + " ");
+		System.out.println("MIN = " + min);
+		for (int i = 0; i < array.length; i++)
+			System.out.print(array[i] + "\t");
+		System.out.println();
+		for (int i = 0; i < array.length; i++) {
+			if (array[i] == max) {
+				array[i] = min;
+			} else if (array[i] == min) {
+				array[i] = max;
+			}
+		}
+		for (int i = 0; i < array.length; i++) {
+			System.out.print(array[i] + "\t");
+		}
+	}
 }

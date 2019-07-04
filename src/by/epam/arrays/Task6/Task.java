@@ -7,34 +7,32 @@ import java.util.Scanner;
 являются простыми числами. */
 
 public class Task {
-    public static void main(String[] args) {
-        Scanner scn = new Scanner(System.in);
-        System.out.print("Input the size of array = ");
-        int size = scn.nextInt();
-        float[] array = new float[size];
-        float sum = 0;
-        System.out.println("Input the elements of array: ");
-        for (int i = 0; i < array.length; i++) {
-            array[i] = scn.nextFloat();
-        }
-        for (int i = 0; i < array.length; i++) {
-            if (isPrimary(i + 1)) sum += array[i];
-        }
-        System.out.println("SUM = " + sum);
-    }
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Input the size of array = ");
+		int size = scanner.nextInt();
+		float[] array = new float[size];
+		float sum = 0;
+		System.out.println("Input the elements of array: ");
+		for (int i = 0; i < array.length; i++) {
+			array[i] = scanner.nextFloat();
+		}
+		scanner.close();
 
-    public static boolean isPrimary(int number) {
-        boolean result = true;
-        if (number == 1) {
-            result = false;
-        } else {
-            for (int i = 2; i < number; i++) {
-                if (number % i == 0) result = false;
-                break;
-            }
-        }
-        return result;
-    }
-
-
+		for (int i = 0; i < array.length; i++) {
+			boolean result = true;
+			if ((i + 1) == 1) {
+				result = false;
+			} else {
+				for (int j = 2; j < (i + 1); j++) {
+					if ((i + 1) % j == 0)
+						result = false;
+					break;
+				}
+			}
+			if (result)
+				sum += array[i];
+		}
+		System.out.println("SUM = " + (int) sum);
+	}
 }

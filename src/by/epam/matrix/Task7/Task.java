@@ -8,10 +8,10 @@ import static java.lang.Math.*;
 
 public class Task {
     public static void main(String[] args) {
-
-        Scanner scn = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.print("Input the size of array = ");
-        int n = scn.nextInt();
+        int n = scanner.nextInt();
+        scanner.close();
         double[][] array = new double[n][n];
         int count = 0;
 

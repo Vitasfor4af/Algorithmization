@@ -9,14 +9,15 @@ import java.util.Scanner;
 
 public class Task {
     public static void main(String[] args) {
-        Scanner scn = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.print("Input the size of array = ");
-        int n = scn.nextInt();
+        int n = scanner.nextInt();
         int[] array = new int[n];
         System.out.println("Input the elements of array: ");
         for (int i = 0; i < array.length; i++) {
-            array[i] = scn.nextInt();
+            array[i] = scanner.nextInt();
         }
+        scanner.close();
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + "\t");
         }
