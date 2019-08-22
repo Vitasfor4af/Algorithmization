@@ -12,18 +12,20 @@ public class Task {
 		Random random = new Random();
 		int rows = 10;
 		int columns = 20;
+		
 		int[][] array = new int[rows][columns];
 		int[] line = new int[rows];
 		System.out.println("input the elements of matrix: ");
 		for (int i = 0; i < array.length; i++) {
-			for (int j = 0; j < array.length; j++) {
+			for (int j = 0; j < array[0].length; j++) {
 				array[i][j] = random.nextInt(15);
 			}
 		}
+		
 		int k = 0;
 		for (int i = 0; i < array.length; i++) {
 			int count = 0;
-			for (int j = 0; j < array.length; j++) {
+			for (int j = 0; j < array[0].length; j++) {
 				System.out.print(array[i][j] + "\t");
 				if (array[i][j] == 5) {
 					count++;

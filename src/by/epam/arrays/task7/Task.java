@@ -11,12 +11,14 @@ public class Task {
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Input the value of n = ");
 		int n = scanner.nextInt();
+
 		double[] array = new double[n * 4];
 		System.out.println("Input the " + (2 * n) + " elements of array: ");
 		for (int i = 0; i < (2 * n); i++) {
 			array[i] = scanner.nextDouble();
 		}
 		scanner.close();
+
 		for (int i = 0; i < array.length && array[i] != 0; i++) {
 			System.out.print((int) array[i] + "\t");
 		}

@@ -14,7 +14,9 @@ public class Task {
 		System.out.print("Input the value of K = ");
 		int K = scanner.nextInt();
 		scanner.close();
+
 		int sum = 0;
+		
 		int[] A = new int[N];
 		for (int i = 0; i < A.length; i++) {
 			A[i] = i;
@@ -25,6 +27,5 @@ public class Task {
 			}
 		}
 		System.out.println("sum = " + sum);
-
 	}
 }

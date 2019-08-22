@@ -10,11 +10,13 @@ public class Task {
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Input the size(n) of array = ");
 		int n = scanner.nextInt();
+		
 		while (n % 2 != 0) {
 			System.out.println("Invalid value of n, try again");
 			n = scanner.nextInt();
 		}
 		scanner.close();
+		
 		int[][] array = new int[n][n];
 		int halfArray = array.length / 2;
 

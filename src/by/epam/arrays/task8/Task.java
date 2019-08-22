@@ -12,6 +12,7 @@ public class Task {
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Input the size of array = ");
 		int size = scanner.nextInt();
+		
 		int[] array = new int[size];
 		int[] newArray = new int[size];
 		System.out.println("Input the elements of array: ");
@@ -19,6 +20,7 @@ public class Task {
 			array[i] = scanner.nextInt();
 		}
 		scanner.close();
+		
 		int min = array[0];
 		for (int i = 0; i < array.length; i++) {
 			if (array[i] < min)

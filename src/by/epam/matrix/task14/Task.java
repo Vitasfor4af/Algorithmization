@@ -11,12 +11,14 @@ public class Task {
 	public static void main(String[] args) {
 		Random random = new Random();
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Input the size of matrix (m, n), correspondingly: ");
+		System.out.print("Input the size m = ");
 		int m = scanner.nextInt();
+		System.out.println("Input the size n = ");
 		int n = scanner.nextInt();
 		scanner.close();
+
 		int[][] array = new int[m][n];
-		for (int j = 0; j < array.length; j++) {
+		for (int j = 0; j < array[0].length; j++) {
 			int count = 0;
 			for (int i = 0; i < array.length; i++) {
 				if (count == (j + 1)) {
@@ -31,16 +33,10 @@ public class Task {
 			}
 		}
 		for (int i = 0; i < array.length; i++) {
-			for (int j = 0; j < array.length; j++) {
+			for (int j = 0; j < array[0].length; j++) {
 				System.out.print(array[i][j] + "\t");
 			}
 			System.out.println();
-		}
-
-		for (int i = 0; i < array.length; i++) {
-			for (int j = 0; j < array.length; j++) {
-
-			}
 		}
 	}
 }

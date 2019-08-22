@@ -8,23 +8,27 @@ public class Task {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		System.out.print("Input the size of matrix = ");
-		int size = scanner.nextInt();
-		int[][] array = new int[size][size];
+		System.out.print("Enter the number of rows = ");
+		int rows = scanner.nextInt();
+		System.out.print("Enter the number of columns = ");
+		int columns = scanner.nextInt();
+
+		int[][] array = new int[rows][columns];
 		System.out.println("input the elements of matrix: ");
 		for (int i = 0; i < array.length; i++) {
-			for (int j = 0; j < array.length; j++) {
+			for (int j = 0; j < array[0].length; j++) {
 				array[i][j] = scanner.nextInt();
 			}
+			System.out.println();
 		}
 		System.out.println("Before:");
-		for (int i = 0; i < size; i++) {
-			for (int j = 0; j < size; j++) {
+		for (int i = 0; i < array.length; i++) {
+			for (int j = 0; j < array[0].length; j++) {
 				System.out.print(array[i][j] + "\t");
 			}
 			System.out.println();
 		}
-		int i, j = 0, k;
+
 		System.out.println("Do you want to sort the matrix in ascending(0) or descending(1)?");
 		int select = scanner.nextInt();
 		while (select < 0 || select > 1) {
@@ -32,35 +36,37 @@ public class Task {
 			select = scanner.nextInt();
 		}
 		scanner.close();
+
 		System.out.println("After:");
 		if (select == 0) {
-			for (i = 0; i < array.length; i++) {
-				for (j = 0; j < array.length; j++) {
-					for (k = j + 1; k < array.length; k++) {
-						if (array[i][j] > array[i][k]) {
-							int tmp = array[i][j];
-							array[i][j] = array[i][k];
-							array[i][k] = tmp;
+			for (int i = 0; i < array.length; i++) {
+				for (int j = 1; j < array[0].length; j++) {
+					for (int k = array[0].length - 1; k >= j; k--) {
+						if (array[i][k] < array[i][k - 1]) {
+							int term = array[i][k];
+							array[i][k] = array[i][k - 1];
+							array[i][k - 1] = term;
 						}
 					}
 				}
 			}
 		} else {
-			for (i = 0; i < array.length; i++) {
-				for (j = 0; j < array.length; j++) {
-					for (k = j + 1; k < array.length; k++) {
-						if (array[i][j] < array[i][k]) {
-							int tmp = array[i][j];
-							array[i][j] = array[i][k];
-							array[i][k] = tmp;
+			for (int i = 0; i < array.length; i++) {
+				for (int j = 1; j < array[0].length; j++) {
+					for (int k = array[0].length - 1; k >= j; k--) {
+						if (array[i][k] > array[i][k - 1]) {
+							int term = array[i][k];
+							array[i][k] = array[i][k - 1];
+							array[i][k - 1] = term;
 						}
 					}
 				}
 			}
 		}
-		for (int z = 0; z < array.length; z++) {
-			for (int l = 0; l < array.length; l++) {
-				System.out.print(array[z][l] + "\t");
+
+		for (int i = 0; i < array.length; i++) {
+			for (int j = 0; j < array[0].length; j++) {
+				System.out.print(array[i][j] + "\t");
 			}
 			System.out.println();
 		}

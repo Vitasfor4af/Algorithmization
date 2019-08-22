@@ -12,8 +12,10 @@ public class Task {
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Input the size of array = ");
 		int size = scanner.nextInt();
-		double[] array = new double[size];
+
 		double sum = 0;
+
+		double[] array = new double[size];
 		System.out.println("Input the elements of array: ");
 		for (int i = 0; i < array.length; i++) {
 			array[i] = scanner.nextDouble();

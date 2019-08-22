@@ -14,6 +14,7 @@ public class Task {
 		System.out.print("Input the size of array = ");
 		int n = scanner.nextInt();
 		scanner.close();
+		
 		double[][] array = new double[n][n];
 		int count = 0;
 

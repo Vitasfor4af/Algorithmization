@@ -13,12 +13,15 @@ public class Task {
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Input the size of array = ");
 		int n = scanner.nextInt();
+		
 		int[] array = new int[n];
 		System.out.println("Input the elements of array: ");
 		for (int i = 0; i < array.length; i++) {
 			array[i] = scanner.nextInt();
 		}
 		scanner.close();
+		
+		System.out.println("Source array:");
 		for (int i = 0; i < array.length; i++) {
 			System.out.print(array[i] + "\t");
 		}

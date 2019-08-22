@@ -10,14 +10,17 @@ public class Task {
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Input the size of matrix = ");
 		int size = scanner.nextInt();
+		
 		int[][] array = new int[size][size];
 		System.out.println("input the elements of matrix: ");
 		for (int i = 0; i < array.length; i++) {
 			for (int j = 0; j < array.length; j++) {
 				array[i][j] = scanner.nextInt();
 			}
+			System.out.println();
 		}
 		scanner.close();
+		
 		for (int i = 0; i < array.length; i++) {
 			for (int j = 0; j < array.length; j++) {
 				System.out.print(array[i][j] + "\t");

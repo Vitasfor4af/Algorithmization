@@ -12,13 +12,15 @@ public class Task {
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Input the size of array = ");
 		int size = scanner.nextInt();
+		
 		System.out.print("Input the value of Z = ");
 		double Z = scanner.nextDouble();
 		scanner.close();
+
 		int count = 0;
 		double[] array = new double[size];
 		for (int i = 1; i < array.length; i++) {
-			array[i] = i;			
+			array[i] = i;
 		}
 		System.out.println("Before");
 		for (int i = 1; i < array.length; i++) {

@@ -11,14 +11,17 @@ public class Task {
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Input the size of array = ");
 		int size = scanner.nextInt();
+		
 		System.out.print("Input the value of i = ");
 		int i = scanner.nextInt();
+		
 		int[] array = new int[size];
 		System.out.println("Input the elements of array: ");
 		for (int j = 0; j < array.length; j++) {
 			array[j] = scanner.nextInt();
 		}
 		scanner.close();
+		
 		for (int j = 0; j < array.length; j++) {
 			if (array[j] > i)
 				System.out.print(array[j] + "\t");
